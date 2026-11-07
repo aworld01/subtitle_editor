@@ -1,0 +1,242 @@
+I know how to explain.
+मुझे समझाना आता है।
+
+I know how to decide.
+मुझे फैसला लेना आता है।
+
+I know how to handle it.
+मुझे इसे संभालना आता है।
+
+I know how to solve problems.
+मुझे समस्याओं का समाधान करना आता है।
+
+I know how to organize things.
+मुझे चीजों को व्यवस्थित करना आता है।
+
+I know how to start a conversation.
+मुझे बातचीत शुरू करना आता है।
+
+I know how to apologize.
+मुझे माफी मांगना आता है।
+
+I know how to keep a secret.
+मुझे राज़ रखना आता है।
+
+I know how to focus.
+मुझे ध्यान केंद्रित करना आता है।
+
+I know how to save time.
+मुझे समय बचाना आता है।
+
+I know how to save money.
+मुझे पैसे बचाना आता है।
+
+I know how to make a budget.
+मुझे बजट बनाना आता है।
+
+I know how to negotiate.
+मुझे सौदा करना आता है।
+
+I know how to compare.
+मुझे तुलना करना आता है।
+
+I know how to choose wisely.
+मुझे समझदारी से चुनाव करना आता है। 
+
+I know how to ask questions.
+मुझे सवाल पूछना आता है।
+
+I know how to respond.
+मुझे जवाब देना आता है।
+
+I know how to listen carefully.
+मुझे ध्यान से सुनना आता है। 
+
+I know how to clarify things.
+मुझे चीजों को स्पष्ट करना आता है।
+
+I know how to make my point.
+मुझे अपनी बात मनवाना आता है।
+
+I know how to handle stress.
+मुझे तनाव से निपटना आता है।
+
+I know how to stay calm.
+मुझे शांत रहना आता है।
+
+I know how to motivate myself.
+मुझे खुद को प्रेरित करना आता है।
+
+I know how to bounce back.
+मुझे मुश्किलों से उबरना आता है। 
+
+I know how to adapt to change.
+मुझे बदलाव के अनुरूप ढलना आता है।
+
+I know how to work under pressure.
+मुझे दबाव में काम करना आता है। 
+
+I know how to be patient.
+मुझे धैर्य रखना आता है।
+
+I know how to deal with tough times.
+मुझे कठिन समय से निपटना आता है।
+
+I know how to control myself.
+मुझे कठिन समय से निपटना आता है।
+
+I know how to move on.
+मुझे आगे बढ़ना आता है।
+
+
+
+
+I suppose.
+मुझे लगता है।
+
+I assume.
+मैं मान लेता हूँ।
+
+I realize.
+मुझे एहसास है।
+
+I remember.
+मुझे याद है।
+
+I forget.
+मैं भूल जाता हूँ।
+
+I notice.
+मैं ध्यान देता हूँ।
+
+I observe.
+मैं अवलोकन करता हूँ।
+
+I recognize.
+मैं पहचानता हूँ।
+
+I admit.
+मैं स्वीकार करता हूँ।
+
+I deny.
+मैं इनकार करता हूँ।
+
+I doubt.
+मुझे संदेह है।
+
+I trust.
+मुझे भरोसा है।
+
+I hope.
+मुझे आशा है।
+
+I expect.
+मुझे उम्मीद है।
+
+I prefer.
+मैं पसंद करता हूँ।
+
+I choose.
+मैं चुनता हूँ।
+
+I decide.
+मैं निर्णय लेता हूँ।
+
+I promise.
+मैं वादा करता हूँ।
+
+I refuse.
+मैं मना करता हूँ।
+
+I forgive.
+मैं माफ करता हूँ।
+
+I appreciate.
+मैं सराहना करता हूँ।
+
+I respect.
+मैं सम्मान करता हूँ।
+
+I admire.
+मैं प्रशंसा करता हूँ।
+
+I support.
+मैं समर्थन करता हूँ।
+
+I encourage.
+मैं प्रोत्साहित करता हूँ।
+
+I recommend.
+मैं सलाह देता हूँ।
+
+I advise.
+मैं सलाह देता हूँ।
+
+I suggest.
+मैं सुझाव देता हूँ।
+
+I warn.
+मैं चेतावनी देता हूँ।
+
+I remind.
+मैं याद दिलाता हूँ।
+
+I explain.
+मैं समझाता हूँ।
+
+I describe.
+मैं वर्णन करता हूँ।
+
+I mention.
+मैं उल्लेख करता हूँ।
+
+I mean.
+मेरा मतलब है।
+
+I reply.
+मैं जवाब देता हूँ।
+
+I answer.
+मैं उत्तर देता हूँ।
+
+I ask.
+मैं पूछता हूँ।
+
+I question.
+मैं प्रश्न करता हूँ।
+
+I hear.
+मैं सुनता हूँ।
+
+I listen.
+मैं ध्यान से सुनता हूँ।
+
+I see.
+मैं देखता हूँ।
+
+I watch.
+मैं ध्यान से देखता हूँ।
+
+I imagine.
+मैं कल्पना करता हूँ।
+
+I wonder.
+मैं सोचता हूँ।
+
+I wish.
+मैं इच्छा करता हूँ।
+
+I care.
+मुझे परवाह है।
+
+I love.
+मैं प्यार करता हूँ।
+
+I hate.
+मैं नफरत करता हूँ।
+
+I fear.
+मुझे डर लगता है।
+
+I believe so.
+मुझे ऐसा ही विश्वास है।

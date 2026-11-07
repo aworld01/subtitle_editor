@@ -1,0 +1,23 @@
+My name is x.
+मेरा नाम एक्स है।
+
+What is your name?
+आपका नाम क्या है?
+
+I have a car.
+मेरे पास एक गाड़ी है।
+
+I have a new car.
+मेरे पास एक नई गाड़ी है।
+
+
+
+I have a car.
+You have a car.
+He has a car.
+They have a car.
+
+I am a doctor.
+You are a doctor.
+He is a doctor.
+They are a doctor.
