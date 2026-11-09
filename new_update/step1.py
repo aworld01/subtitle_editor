@@ -2,8 +2,8 @@ import json, re, glob
 
 name = glob.glob("*.srt")[0]
 OUTPUT_FILENAME = f'hindi_{name}'
+UNTRANSLATED_FILENAME = 'untranslated.txt'
 
-# Find all SRT files except the output file
 srt_files = [f for f in glob.glob("*.srt") if f != OUTPUT_FILENAME]
 if not srt_files:
     raise FileNotFoundError("No input SRT file found!")
@@ -11,18 +11,16 @@ if not srt_files:
 file = srt_files[0]
 db = glob.glob("*.json")[0]
 
+
 def translate_srt_partial(srt_filename, json_filename, output_filename):
-    # Load the translation dictionary
     with open(json_filename, 'r', encoding='utf-8') as f:
         trans_dict = json.load(f)
 
-    # Sort dictionary keys by length in descending order for greedy phrase matching
     sorted_keys = sorted(trans_dict.keys(), key=len, reverse=True)
 
     with open(srt_filename, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Parse SRT blocks
     raw_blocks = re.split(r'\n\s*\n', content.strip())
     blocks = []
     for b in raw_blocks:
@@ -34,10 +32,14 @@ def translate_srt_partial(srt_filename, json_filename, output_filename):
             text = ' '.join(lines[2:])
             blocks.append({'start': start_time, 'end': end_time, 'text': text})
 
-    # Group broken lines across blocks into complete sentences
     sentences = []
     current_group_times = []
     current_text_parts = []
+
+    # Keep full sentences that were never translated
+    untranslated_sentences = []
+    # NEW: keep translated sentences (full count, not unique)
+    translated_sentences = []
 
     for block in blocks:
         if not current_group_times:
@@ -49,13 +51,20 @@ def translate_srt_partial(srt_filename, json_filename, output_filename):
         combined_text = ' '.join(current_text_parts)
         combined_text_normalized = re.sub(r'\s+', ' ', combined_text).strip()
 
-        # Check if sentence is complete (ends with . ? !) or if it's the last block
         if re.search(r'[.?!]$', combined_text_normalized) or block == blocks[-1]:
-            # Apply partial/phrase translation using dictionary keys
             translated_text = combined_text_normalized
+            matched = False
+
             for key in sorted_keys:
                 if key in translated_text:
                     translated_text = translated_text.replace(key, trans_dict[key])
+                    matched = True
+
+            if not matched:
+                untranslated_sentences.append(combined_text_normalized)
+            else:
+                # NEW: track every translated sentence (full count)
+                translated_sentences.append(translated_text)
 
             sentences.append({
                 'start': current_group_times[0],
@@ -65,10 +74,30 @@ def translate_srt_partial(srt_filename, json_filename, output_filename):
             current_group_times = []
             current_text_parts = []
 
-    # Write the translated and merged subtitles to the output file
+    # Write translated SRT
     with open(output_filename, 'w', encoding='utf-8') as f:
         for i, item in enumerate(sentences, 1):
             f.write(f"{i}\n{item['start']} --> {item['end']}\n{item['text']}\n\n")
+
+    # Write unique untranslated sentences (order of first appearance)
+    seen = set()
+    unique_sentences = []
+    for s in untranslated_sentences:
+        if s not in seen:
+            seen.add(s)
+            unique_sentences.append(s)
+
+    with open(UNTRANSLATED_FILENAME, 'w', encoding='utf-8') as f:
+        f.write('\n\n'.join(unique_sentences))
+        if unique_sentences:
+            f.write('\n')
+
+    # NEW: console summary
+    total_count = len(translated_sentences) + len(untranslated_sentences)
+    print(f"Total sentences:                     {total_count}")
+    print(f"Translated sentences (full count):   {len(translated_sentences)}")
+    print(f"Fully untranslated unique sentences: {len(unique_sentences)}")
+
 
 if __name__ == '__main__':
     translate_srt_partial(file, db, OUTPUT_FILENAME)

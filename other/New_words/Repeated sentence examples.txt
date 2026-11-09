@@ -1,9 +1,6 @@
 My name is x.
 मेरा नाम एक्स है।
 
-What is your name?
-आपका नाम क्या है?
-
 I have a car.
 मेरे पास एक गाड़ी है।
 

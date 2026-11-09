@@ -321,3 +321,12 @@ It's really good.
 
 I have some work with you.
 मुझे आपसे कुछ काम है।
+
+What is your name?
+आपका नाम क्या है?
+
+Have we met before?
+क्या हम पहले मिल चुके हैं?
+
+Excuse me, have we met before?
+माफ़ कीजिए, क्या हम पहले मिल चुके हैं?
