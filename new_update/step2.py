@@ -1,6 +1,5 @@
 import json
 import sys
-import argparse
 import glob
 import os
 import re
@@ -8,6 +7,12 @@ import shutil
 
 DEFAULT_INPUT_DIR = "."
 UNPAIRED_FILENAME = "unpaired.txt"
+
+# Hardcoded output JSON (replaces the old -o/--output argument)
+OUTPUT_JSON = "sentence_dict.json"
+
+# Folder where .bak copies of processed files are stored
+BACKUP_DIR = "backup"
 
 # Regex to detect Devanagari (Hindi) characters
 DEVANAGARI_RE = re.compile(r"[\u0900-\u097F]")
@@ -110,17 +115,29 @@ def smart_pair(non_empty):
 
 
 def backup_file(file_path):
-    """Create a .bak copy if one doesn't already exist."""
-    backup = file_path + ".bak"
-    if not os.path.exists(backup):
-        shutil.copy2(file_path, backup)
-        return True
-    return False
+    """
+    Copy file into the BACKUP_DIR folder (only once per source file).
+    Returns (made_backup, backup_path).
+    """
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+
+    base = os.path.basename(file_path)
+    backup_path = os.path.join(BACKUP_DIR, base + ".bak")
+
+    if not os.path.exists(backup_path):
+        shutil.copy2(file_path, backup_path)
+        return True, backup_path
+    return False, backup_path
 
 
 def clean_and_update_txt_files(txt_files):
     """Clean each file independently. Returns count of unpaired sentences."""
     incomplete_report = []
+
+    # ---- GLOBAL dedup set: spans ALL input files ----
+    # Created once outside the loop so a sentence already seen in an earlier
+    # file is removed from every later file too.
+    seen_english = set()
 
     print("Cleaning and deduplicating text files (preserving formatting)...")
 
@@ -133,8 +150,7 @@ def clean_and_update_txt_files(txt_files):
         # --- Smart pairing (handles misaligned files) ---
         raw_pairs, unpaired = smart_pair(non_empty)
 
-        # --- Per-file dedup (does NOT cannibalize other files) ---
-        seen_english = set()
+        # --- GLOBAL dedup (across all files, not just within this one) ---
         file_valid_pairs = []
         removed_count = 0
 
@@ -145,8 +161,8 @@ def clean_and_update_txt_files(txt_files):
                 seen_english.add(eng)
                 file_valid_pairs.append((eng, hin))
 
-        # --- Backup original before rewriting ---
-        made_backup = backup_file(file_path)
+        # --- Backup original before rewriting (into BACKUP_DIR) ---
+        made_backup, backup_path = backup_file(file_path)
 
         # --- Rebuild file with ONLY valid pairs ---
         new_file_lines = []
@@ -163,62 +179,87 @@ def clean_and_update_txt_files(txt_files):
         for line in unpaired:
             incomplete_report.append((file_path, line))
 
-        backup_note = " (backup: .bak)" if made_backup else ""
+        backup_note = f" (backup: {backup_path})" if made_backup else ""
         print(
             f"  {file_path}: {len(file_valid_pairs)} pair(s), "
             f"removed {removed_count} duplicate(s), "
             f"{len(unpaired)} unpaired{backup_note}"
         )
 
-    # --- Write unpaired.txt only if there is something to write ---
-    unpaired_lines = [inc_line for _, inc_line in incomplete_report]
+    # --- Global dedup of unpaired lines too (case-insensitive) ---
+    seen_unpaired = set()
+    unpaired_unique = []
+    for _, line in incomplete_report:
+        key = line.strip().lower()
+        if key in seen_unpaired:
+            continue
+        seen_unpaired.add(key)
+        unpaired_unique.append(line)
 
-    if unpaired_lines:
+    # --- Write unpaired.txt only if there is something to write ---
+    if unpaired_unique:
         with open(UNPAIRED_FILENAME, "w", encoding="utf-8") as f:
-            f.write("\n\n".join(unpaired_lines))
+            f.write("\n\n".join(unpaired_unique))
             f.write("\n")
-        print(f"Unpaired sentences saved to: {UNPAIRED_FILENAME} ({len(unpaired_lines)})")
+        print(
+            f"Unpaired sentences saved to: {UNPAIRED_FILENAME} "
+            f"({len(unpaired_unique)} unique, {len(incomplete_report)} total)"
+        )
     else:
         print("No unpaired sentences found. Skipping unpaired.txt.")
 
-    return len(unpaired_lines)
+    return len(unpaired_unique)
+
+
+def remove_empty_txt_files(txt_files):
+    """
+    Delete any of the given .txt files that ended up empty after cleaning.
+    Never touches unpaired.txt, .bak files, or anything in BACKUP_DIR.
+    Returns the list of removed file paths.
+    """
+    removed = []
+    for path in txt_files:
+        base = os.path.basename(path)
+        if base == UNPAIRED_FILENAME or base.endswith(".bak"):
+            continue
+        if os.path.dirname(os.path.abspath(path)) == os.path.abspath(BACKUP_DIR):
+            continue
+        if os.path.isfile(path) and os.path.getsize(path) == 0:
+            try:
+                os.remove(path)
+                removed.append(path)
+                print(f"🗑️  Removed empty file: {path}")
+            except OSError as e:
+                print(f"⚠️  Could not remove {path}: {e}")
+
+    if not removed:
+        print("✅ No empty .txt files to remove.")
+    return removed
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Clean text files, remove duplicates, and build sentence JSON dictionary."
-    )
-    parser.add_argument(
-        "input_files", nargs="*",
-        help=f"Input .txt file(s). If omitted, all .txt files in DEFAULT_INPUT_DIR ({DEFAULT_INPUT_DIR!r}) are used."
-    )
-    parser.add_argument(
-        "-o", "--output", default="sentence_dict.json",
-        help="Output JSON file for the combined dictionary (default: sentence_dict.json)"
-    )
-    args = parser.parse_args()
+    # Auto-discover input .txt files in DEFAULT_INPUT_DIR
+    input_files = sorted(glob.glob(os.path.join(DEFAULT_INPUT_DIR, "*.txt")))
+    input_files = [
+        f for f in input_files
+        if os.path.basename(f) != UNPAIRED_FILENAME
+        and not os.path.basename(f).endswith(".bak")
+    ]
 
-    if not args.input_files:
-        args.input_files = sorted(glob.glob(os.path.join(DEFAULT_INPUT_DIR, "*.txt")))
-        args.input_files = [
-            f for f in args.input_files
-            if os.path.basename(f) != UNPAIRED_FILENAME
-            and not os.path.basename(f).endswith(".bak")
-        ]
-        if not args.input_files:
-            print(f"No file paths given, and no .txt files found in '{DEFAULT_INPUT_DIR}/'.")
-            sys.exit(1)
+    if not input_files:
+        print(f"No .txt files found in '{DEFAULT_INPUT_DIR}/'.")
+        sys.exit(1)
 
     # Step 1: Clean text files + write unpaired.txt (if any)
-    unpaired_count = clean_and_update_txt_files(args.input_files)
+    unpaired_count = clean_and_update_txt_files(input_files)
 
     # Step 2: Build/Update JSON dictionary
-    existing = load_existing_dict(args.output)
+    existing = load_existing_dict(OUTPUT_JSON)
     combined = dict(existing)
     duplicate_count = 0
     new_count = 0
 
-    for path in args.input_files:
+    for path in input_files:
         pairs, _ = extract_pairs_from_file(path)
         for english, hindi in pairs.items():
             if english in combined:
@@ -227,15 +268,19 @@ def main():
                 combined[english] = hindi
                 new_count += 1
 
-    with open(args.output, "w", encoding="utf-8") as f:
+    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(combined, f, ensure_ascii=False, indent=2)
 
     print(f"\n--- JSON Summary ---")
-    print(f"Total pairs in {args.output}: {len(combined)}")
+    print(f"Total pairs in {OUTPUT_JSON}: {len(combined)}")
     print(f"New pairs added this run:     {new_count}")
     print(f"Duplicate pairs skipped:      {duplicate_count}")
     print(f"Unpaired sentences:           {unpaired_count}")
-    print(f"Saved combined dictionary to {args.output}")
+    print(f"Saved combined dictionary to {OUTPUT_JSON}")
+
+    # Step 3: Remove any source files that ended up empty
+    print()
+    remove_empty_txt_files(input_files)
 
 
 if __name__ == "__main__":
