@@ -1,0 +1,68 @@
+Hello, who is speaking?
+हेलो कौन बोल रहा है?
+
+Your voice is breaking.
+तुम्हारी आवाज कट कर आ रही है।
+
+Alright, talk to you later.
+ठीक है, बाद में बात करते हैं।
+
+Do you recognize me?
+क्या आप मुझे पहचान रहे हो?
+
+My battery is running low.
+मेरी बैटरी खत्म हो रही है।
+
+I was about to call you.
+मैं तुम्हें कॉल करने ही वाला था।
+
+Don't hang up on me.
+मेरा फोन मत काटना।
+
+My phone was on silent.
+मेरा फोन साइलेंट में था।
+
+I have to go now.
+मुझे अभी जाना होगा।
+
+My phone went off.
+मेरा फोन स्विच ऑफ हो गया था।
+
+Did you see my message.
+तुमने मेरा मैसेज देखा।
+
+Put the phone on speaker.
+फोन स्पीकर पर डालो।
+
+Be on the line for a minute.
+1 मिनट लाइन पर रहो।
+
+Can we talk now?
+क्या अभी बात कर सकते हैं?
+
+I'll call you tomorrow.
+मैं तुम्हें कल फोन करूंगा।
+
+I had called you.
+मैंने तुम्हें कॉल किया था।
+
+Call me again tomorrow.
+कल फिर कॉल करना।
+
+I am busy right now.
+मैं अभी व्यस्त हूं।
+
+Is there no network?
+वहां नेटवर्क नहीं है क्या?
+
+I will call after a while.
+थोड़ी देर बाद बात करूंगा।
+
+Did you call me?
+क्या तुमने कॉल किया था
+
+My network was gone.
+मेरा नेटवर्क चला गया था
+
+I can't hear your voice.
+तुम्हारी आवाज नहीं आ रही है
