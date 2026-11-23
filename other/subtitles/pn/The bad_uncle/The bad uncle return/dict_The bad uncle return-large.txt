@@ -1,6 +1,9 @@
 Well,
 खैर,
 
+Oh
+ओह
+
 Uncle Joe
 अंकल जो
 
@@ -307,7 +310,7 @@ You still can't catch me!
 You can't get to me.
 तुम मुझे छू भी नहीं सकती।
 
-it's so tight.
+It's so tight.
 यह बहुत टाइट है।
 
 No, you don't!
@@ -939,9 +942,6 @@ Oh my god, you're doing so good.
 
 That's going in so deep.
 यह बहुत अंदर तक जा रहा है।
-
-It's so tight.
-यह बहुत टाइट है।
 
 Oh, I love that too, you fucker.
 ओह, मुझे भी वह बहुत पसंद है, हरामी।
