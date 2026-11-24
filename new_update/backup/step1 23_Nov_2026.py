@@ -42,8 +42,11 @@ def build_regex(key: str):
     words = re.findall(r'\w+', key.lower())
     if not words:
         return None
+    # FIX: allow any non-word character (space, comma, apostrophe ' or ’,
+    # hyphen, etc.) between words. The previous `[\s,]*` did not allow
+    # apostrophes, so keys like "it's" never matched "it's" in the text.
     return re.compile(
-        r'\b' + r'[\s,]*'.join(re.escape(w) for w in words) + r'\b',
+        r'\b' + r'[^\w]*'.join(re.escape(w) for w in words) + r'\b',
         re.IGNORECASE,
     )
 
