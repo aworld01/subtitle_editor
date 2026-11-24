@@ -1,13 +1,14 @@
 import json, re, glob, os
 
+remove = glob.glob("*.srt")[0]
+
+if remove.startswith("hindi"):
+	os.remove(remove)
+
+
 name = glob.glob("*.srt")[0]
-
-if name.startswith("hindi"):
-	os.remove(name)
-
 OUTPUT_FILENAME = f'hindi_{name}'
 UNTRANSLATED_FILENAME = 'untranslated.txt'
-
 
 
 srt_files = [f for f in glob.glob("*.srt") if f != OUTPUT_FILENAME]
