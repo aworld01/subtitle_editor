@@ -16,15 +16,17 @@ It's nothing.
 You're such a good mother.
 तुम तो बहुत अच्छी माँ हो।
 
-
 No, I can't.
 नहीं, मैं नहीं कर सकता।
 
 Mail came today.
 आज डाक आई।
 
-We got some letters.
-हमें कुछ पत्र मिले।
+You got some letters.
+तुम्हारे पास कुछ चिट्ठियाँ आई हैं।
+
+One from your grandma.
+एक तुम्हारी नानी की तरफ़ से है।
 
 She's really sad about what happened to you.
 वह आपके साथ जो हुआ उससे बहुत दुखी है।
@@ -124,4 +126,25 @@ Just don't worry about it.
 
 No, you don't understand.
 नहीं, आप समझ नहीं रहे हैं।
+
+Mom
+माँ
+
+You
+तुम
+
+You can't help.
+तुम मदद नहीं कर सकती।
+
+Aaron
+एरन
+
+Please
+कृपया
+
+Let me help.
+मुझे मदद करने दो।
+
+What are you doing?
+तुम क्या कर रही हो?
 
