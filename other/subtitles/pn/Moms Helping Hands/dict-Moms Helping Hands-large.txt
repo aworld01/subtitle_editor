@@ -1,11 +1,74 @@
 Mm
 म्म।
 
+Mom
+माँ
+
+Mommy
+माँ
+
 Sweetie.
 जान।
 
 Hey
 अरे
+
+Okay?
+ठीक है?
+
+Aaron
+एरन
+
+She says
+वह कहती हैं।
+
+I'm sorry.
+माफ़ करना।
+
+I
+मैं
+
+Just
+बस
+
+I'm
+मैं
+
+Like
+जैसे
+
+And
+और
+
+Please
+कृपया
+
+No
+नहीं
+
+You
+तुम
+
+But
+लेकिन
+
+Wait
+रुको।
+
+Relax.
+आराम करो।
+
+Coming
+आ रही हूँ।
+
+All right.
+ठीक है।
+
+Right there.
+वहीं।
+
+I'm looking for you.
+मैं तुम्हें ढूँढ रहा हूँ।
 
 I love you for taking care of me.
 मैं आपसे प्यार करता हूँ क्योंकि आप मेरा ख्याल रखती हैं।
@@ -16,8 +79,14 @@ It's nothing.
 You're such a good mother.
 तुम तो बहुत अच्छी माँ हो।
 
-No, I can't.
-नहीं, मैं नहीं कर सकता।
+I can't.
+मैं नहीं कर सकता।
+
+You feel good?
+क्या तुम्हें अच्छा लग रहा है?
+
+I'm just gonna go... make dinner right now.
+मैं बस अब खाना बनाने चलती हूँ।
 
 Mail came today.
 आज डाक आई।
@@ -29,28 +98,52 @@ One from your grandma.
 एक तुम्हारी नानी की तरफ़ से है।
 
 She's really sad about what happened to you.
-वह आपके साथ जो हुआ उससे बहुत दुखी है।
+वह तुम्हारे साथ जो हुआ उससे बहुत दुखी है।
 
-She says, Erin, I was absolutely devastated to hear about your accident.
-वह कहती है, एरिन, तुम्हारे एक्सीडेंट के बारे में सुनकर मैं पूरी तरह टूट गई थी।
+I was absolutely devastated to hear about your accident.
+तुम्हारे एक्सीडेंट के बारे में सुनकर मैं पूरी तरह टूट गई थी।
 
-Mom, I don't want to hear it, okay?
-माँ, मैं यह सुनना नहीं चाहता, ठीक है?
+I can't imagine.
+मैं सोच भी नहीं सकती।
 
-I'll just leave them here to get a leave, read later.
-मैं इन्हें यहीं छोड़ देता हूँ, बाद में पढ़ लूँगा।
+Gentle touching.
+हल्का-हल्का स्पर्श।
 
-Look, I'm sorry for snapping at you.
-देखो, तुम पर भड़कने के लिए माफ़ी चाहता हूँ।
+I don't want to hear it.
+मैं इसे सुनना नहीं चाहता।
+
+Me gonna leave
+मैं निकलती हूँ।
+
+Read later.
+बाद में पढ़ लेना
+
+For snapping at you.
+तुम पर भड़कने के लिए।
 
 I'm just, I'm stuck.
 मैं बस... मैं अटक गया हूँ।
 
-Sweetie, I feel terrible.
-स्वीटी, मुझे बहुत बुरा लग रहा है।
+I feel terrible.
+मुझे बहुत बुरा लग रहा है।
 
-The accident, it was so awful.
-वह हादसा, बहुत ही भयानक था।
+The accident.
+वह हादसा।
+
+It was so awful
+वह बहुत ही भयानक था।
+
+Knowing your age and have to go through something like that.
+तुम्हारी उम्र को देखते हुए और ऐसी चीज़ से गुज़रना पड़ना...
+
+To have to deal with this.
+फिर इससे निपटना पड़े।
+
+On top of that.
+इसके अलावा।
+
+Can imagine what you're going through?
+मैं समझ सकती हूँ कि तुम किस दौर से गुज़र रहे हो।
 
 No I have to go through something like that.
 नहीं, मुझे कुछ ऐसा ही झेलना पड़ रहा है।
@@ -64,6 +157,33 @@ Oh, that's okay.
 You can tease me through.
 आप मुझे चिढ़ा सकते हैं।
 
+You're my mom.
+तुम मेरी माँ हो।
+
+It's really messed up.
+यह सच में बहुत गड़बड़ है।
+
+What the fuck?
+अरे ये क्या है?
+
+Why you've been so frustrated these last few weeks.
+पिछले कुछ हफ़्तों से तुम इतने परेशान क्यों हो?
+
+No one.
+कोई नहीं।
+
+In times of need.
+जरूरत के समय।
+
+It's already awkward.
+यह पहले से ही अजीब हो चुका है।
+
+Let me help you.
+मुझे तुम्हारी मदद करने दो।
+
+No one could blame you.
+तुम्हें कोई दोष नहीं दे सकता।
+
 Your best son.
 आपका सबसे अच्छा बेटा।
 
@@ -75,6 +195,21 @@ That's sweetie.
 
 Yes, that's it.
 हाँ येही बात है।
+
+It's strange for me too.
+यह मेरे लिए भी अजीब है।
+
+It's not about how I feel.
+बात यह नहीं है कि मुझे कैसा लग रहा है।
+
+It's about... Taking care of you.
+यह... तुम्हारा ख्याल रखने के बारे में है।
+
+And your needs.
+और तुम्हारी ज़रूरतें।
+
+What about Dad?
+पापा का क्या?
 
 I never got you in trouble.
 मैंने तुम्हें कभी मुसीबत में नहीं डाला।
@@ -90,6 +225,12 @@ How does that feel, Steve?
 
 Probably a little bit.
 शायद थोड़ा-बहुत।
+
+Of course not.
+बिल्कुल नहीं।
+
+Are you like... attracted to me or some... sick shit?
+क्या तुम... मतलब... मेरी तरफ़ आकर्षित हो, या कोई घिनौनी बात है?
 
 No, it's too good to get out of here.
 नहीं, यह इतना बढ़िया है कि यहाँ से जाने का मन ही नहीं करता।
@@ -124,23 +265,32 @@ I can't put on my own clothes.
 Just don't worry about it.
 बस इस बारे में चिंता मत करो।
 
-No, you don't understand.
-नहीं, आप समझ नहीं रहे हैं।
+You don't understand.
+तुम नहीं समझती हो।
 
-Mom
-माँ
+I can't even...
+मुझसे तो यह भी नहीं हो पाएगा...
 
-You
-तुम
+Can't even...
+यह भी नहीं हो पाएगा...
+
+I'm just your stepmom.
+मैं अब तुम्हारी सौतेली माँ हूँ।
+
+I consider you my son.
+मैं तुम्हें अपना बेटा मानती हूँ।
+
+I just... feel so powerless.
+मुझे अब... बहुत बेबसी महसूस हो रही है।
+
+I really wish there was... something I could do to help.
+काश... मैं मदद के लिए कुछ कर पाती।
+
+Not with this.
+इस मामले में नहीं।
 
 You can't help.
 तुम मदद नहीं कर सकती।
-
-Aaron
-एरन
-
-Please
-कृपया
 
 Let me help.
 मुझे मदद करने दो।
@@ -154,6 +304,18 @@ I'll just leave them here.
 Am I wrong?
 क्या मैं गलत हूँ?
 
+20 years old.
+बीस साल का।
+
+You have needs.
+तुम्हारी भी ज़रूरतें हैं।
+
+I've been...Trying to think of a way...
+मैं... कोई रास्ता निकालने की कोशिश कर रहा हूँ...
+
+I can help you.
+मैं तुम्हारी मदद कर सकती हूँ।
+
 A stepmom should be able to help her stepson...
 एक सौतेली माँ को अपने सौतेले बेटे की मदद करने में सक्षम होना चाहिए...
 
@@ -162,6 +324,9 @@ I... I... I don't think your father needs to know.
 
 It's not like we're making love.
 ऐसा नहीं है कि हम चुदाइ कर रहे हैं।
+
+A young man like you.
+तुम जैसे नौजवान।
 
 Obviously things have been a little...
 जाहिर है, चीज़ें थोड़ी...
@@ -181,12 +346,84 @@ Put my mouth on it?
 Just relax.
 बस आराम करो।
 
+Calm down!
+शांत हो जाओ!
+
+You can't just tease me like that.
+तुम मुझे ऐसे ही छेड़ नहीं सकती।
+
+I don't see how it's different.
+मुझे समझ नहीं आता कि यह अलग कैसे है।
+
+It's completely different now.
+अब यह बिल्कुल अलग है।
+
+I just wanted to help.
+मैं तो बस मदद करना चाहती थी।
+
+I'll be sure of it.
+मैं इसका पूरा ध्यान रखूँगा।
+
+Nothing like that will ever happen again.
+ऐसा दोबारा कभी नहीं होगा।
+
+What does that mean?
+इसका क्या मतलब है?
+
+This was your idea to begin with!
+यह तो पहले से ही तुम्हारा आइडिया था!
+
+You started this!
+तुमने यह शुरू किया!
+
+We'll talk this through!
+हम इस बारे में खुलकर बात करेंगे!
+
+It's going to happen again.
+यह दोबारा होगा।
+
+Do you see what feels to be teased?
+क्या तुम्हें समझ आ रहा है कि चिढ़ाया जाना कैसा लगता है?
+
+Do you want to tease me again?
+क्या तुम मुझे फिर से छेड़ना चाहती हो?
+
+Do you want to give me what I want?
+क्या तुम मुझे वह देना चाहती हो जो मुझे चाहिए?
+
 How does that feel?
 कैसा लग रहा है?
 
 Get up on my bed.
 मेरे बिस्तर पर आ जाओ।
 
+Let me take care of you.
+मुझे तुम्हारा ख्याल रखने दो।
+
 Mommy's always gonna take care of you.
 मम्मी हमेशा तुम्हारा ख्याल रखेगी।
+
+I want you to take care of me every day like before.
+मैं चाहता हूँ कि तुम पहले की तरह हर दिन मेरा ख्याल रखो।
+
+Cum for me.
+मेरे लिए झड़ो।
+
+I'm no more teasing.
+मैं अब और नहीं छेड़ रहा हूँ।
+
+Can you give me what I want?
+क्या तुम मुझे वह दे सकती हो जो मैं चाहता हूँ?
+
+I didn't realize you were still changing.
+मुझे पता नहीं था कि तुम अभी भी कपड़े बदल रहे हो।
+
+I'm almost done.
+मैं लगभग कर चुका हूँ।
+
+Your father and I are going out on a date tonight.
+तुम्हारे पिता और मैं आज रात डेट पर जा रहे हैं।
+
+There's no reason to wait up for me.
+मेरे लिए जागने की कोई ज़रूरत नहीं है।
 
